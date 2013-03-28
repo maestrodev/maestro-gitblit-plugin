@@ -1,3 +1,6 @@
+/*
+ * Copyright (c) 2013, MaestroDev. All rights reserved.
+ */
 package com.maestrodev.maestro.plugins.gitblit;
 
 import java.io.IOException;
