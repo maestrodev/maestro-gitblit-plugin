@@ -90,7 +90,7 @@ public class GitblitWorkerTest {
 	when(workerSpy.getGitblitClient()).thenReturn(clientMock);
 
         workerSpy.createRepository();        
-        assertThat(workerSpy.getError(), is("Unable to create repository"));
+        assertThat(workerSpy.getError(), is("Unable to create junit.git repository owned by admin on Gitblit server at https://localhost:8443"));
         
     }
     

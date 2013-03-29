@@ -28,21 +28,23 @@ public class GitblitWorker extends MaestroWorker {
 	GitblitClient client = getGitblitClient();
 	
 	String repositoryName = getField("repository_name");
+	String messageSuffix = String.format(" %s repository owned by %s on Gitblit server at %s", 
+		repositoryName, getField("owner"), getField("url"));
+	
 	
 	RepositoryModel repository = new RepositoryModel(repositoryName, 
 		getField("description"), 
 		getField("owner"), null);
 	try {
 	    if (!client.createRepository(repository, null)) {
-		logger.log(Level.WARNING, "Unable to create repository");
-		setError("Unable to create repository");
+		logger.log(Level.WARNING, "Unable to create" + messageSuffix);
+		setError("Unable to create" + messageSuffix);
 	    }
 	} catch (IOException e) {
-	    logger.log(Level.WARNING, "Error creating repository", e);
-	    setError("Error creating repository: " + e.getMessage());
+	    logger.log(Level.WARNING, "Error creating" + messageSuffix, e);
+	    setError("Error creating" + e.getMessage());
 	}
-	writeOutput(String.format("Created %s repository owned by %s on Gitblit server at %s", 
-		repositoryName, getField("owner"), getField("url")));
+	writeOutput("Created" + messageSuffix);
     }
     
     
