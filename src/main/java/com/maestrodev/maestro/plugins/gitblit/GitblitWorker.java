@@ -15,6 +15,12 @@ import com.maestrodev.maestro.plugins.MaestroWorker;
 public class GitblitWorker extends MaestroWorker {
 
     private static final Logger logger = Logger.getLogger(GitblitWorker.class.getName());
+    
+    public GitblitWorker() {
+	
+    }
+        
+    
     /** 
      * Creates a new repository.
      */
@@ -34,7 +40,9 @@ public class GitblitWorker extends MaestroWorker {
 	} catch (IOException e) {
 	    logger.log(Level.WARNING, "Error creating repository", e);
 	    setError("Error creating repository: " + e.getMessage());
-	}	
+	}
+	writeOutput(String.format("Created %s repository owned by %s on Gitblit server at %s", 
+		repositoryName, getField("owner"), getField("url")));
     }
     
     
