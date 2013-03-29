@@ -50,7 +50,7 @@ public class GitblitWorker extends MaestroWorker {
     
     protected GitblitClient getGitblitClient() {
 	GitblitRegistration registration = 
-		new GitblitRegistration(getField("server_name"), 
+		new GitblitRegistration("", 
 			getField("url"), 
 			getField("account"), 
 			getField("password").toCharArray());
