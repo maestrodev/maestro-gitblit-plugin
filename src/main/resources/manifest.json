@@ -1,6 +1,6 @@
 [
   {
-    "name": "gitblit plugin",
+    "name": "Gitblit plugin",
     "description": "Manage repositories on a Gitblit server",
     "license": "Apache 2.0",
     "author": "Etienne Pelletier",
@@ -62,7 +62,8 @@
         }
       },
       "outputs": {},
-      "tool_name": "SCM"
+      "tool_name": "SCM",
+      "icon": "gitblit.png"
     },
     "source_types": [
       {
