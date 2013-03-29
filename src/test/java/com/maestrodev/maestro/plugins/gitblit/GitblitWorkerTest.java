@@ -43,8 +43,8 @@ public class GitblitWorkerTest {
 	 // Setup the mock stomp connection
 	 stompConnectionFactory = mock(StompConnectionFactory.class);
 	 blockingConnection = mock(BlockingConnection.class);
-	 when(stompConnectionFactory.getConnection(Matchers.any(String.class),
-	                Matchers.any(int.class))).thenReturn(blockingConnection);
+	 when(stompConnectionFactory.getConnection(Matchers.anyString(),
+	                Matchers.anyInt())).thenReturn(blockingConnection);
 	
 	fields = new JSONObject();
 	fields.put("server_name", "localhost");
