@@ -12,14 +12,23 @@ import com.gitblit.client.GitblitRegistration;
 import com.gitblit.models.RepositoryModel;
 import com.maestrodev.maestro.plugins.MaestroWorker;
 
+/**
+ * This is the main worker class of the maestro gitblit plugin. It is used to
+ * create new repositories on a Gitblit server.
+ * 
+ * @author Etienne Pelletier <epelletier@maestrodev.com>
+ *
+ */
 public class GitblitWorker extends MaestroWorker {
 
     private static final Logger logger = Logger.getLogger(GitblitWorker.class.getName());
     
+    /**
+     * Default constructor.
+     */
     public GitblitWorker() {
 	
-    }
-        
+    }        
     
     /** 
      * Creates a new repository.
@@ -47,7 +56,12 @@ public class GitblitWorker extends MaestroWorker {
 	writeOutput("Created" + messageSuffix);
     }
     
-    
+    /**
+     * Instantiates a new GitblitClient from parameters passed in the work item
+     * fields.
+     * 
+     * @return a GitblitClient instance.
+     */
     protected GitblitClient getGitblitClient() {
 	GitblitRegistration registration = 
 		new GitblitRegistration("", 
