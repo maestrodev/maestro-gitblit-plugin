@@ -51,7 +51,7 @@ public class GitblitWorker extends MaestroWorker {
 	    }
 	} catch (IOException e) {
 	    logger.log(Level.WARNING, "Error creating" + messageSuffix, e);
-	    setError("Error creating" + e.getMessage());
+	    setError("Error creating" + messageSuffix + ": " + e.getMessage());
 	}
 	writeOutput("Created" + messageSuffix);
     }
