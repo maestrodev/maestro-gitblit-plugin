@@ -1,70 +1,79 @@
-{
-    "source_types": [
-    {
-      "name" : "Gitblit",
-      "options" : {
-        "server_name": "String",
-        "url":"String",
-        "account": "String",
-        "password": "Password",
+[
+  {
+    "name": "gitblit plugin",
+    "description": "Manage repositories on a Gitblit server",
+    "license": "Apache 2.0",
+    "author": "Etienne Pelletier",
+    "version": "${project.version}-${buildNumber}",
+    "class": "com.maestrodev.maestro.plugins.gitblit.GitblitWorker",
+    "type": "java",
+    "dependencies": [
+      {
+        "name": "${project.artifactId}-${project.version}.jar"
+      },
+      {
+        "name": "pom.xml"
       }
-    }],
-    "tasks" : [{
-        "name" : "gitblit plugin",
-        "description" : "Manage repositories on a Gitblit server",
-        "license" : "Apache 2.0",
-        "author": "Etienne Pelletier",
-        "version": "${project.version}-${buildNumber}",
-        "class": "com.maestrodev.maestro.plugins.gitblit.GitblitWorker",    
-        "type":"java",
-        "task":{
-          "command" : "/gitblit/createRepository",    
-          "inputs" :  {
-            "server_name":{
-              "required":true,
-              "type":"String",
-              "value": "" 
-              "description": "The name of the Gitblit server."
-            },
-            "url":{
-              "required":true,
-              "type":"Url",
-              "value":"",
-              "description": "The Gitblit server URL"
-            },
-            "account":{
-              "required":true,
-              "type":"String",
-              "value":"",
-              "description": "The Gitblit account name"
-            },
-            "password":{
-              "required":true,
-              "type":"Password",
-              "value":"",
-              "description": "The Gitblit account password"
-            },
-            "repository_name":{
-              "required":true,
-              "type":"String",
-              "value":"",
-              "description": "The repository name"
-            },
-            "description":{
-              "required":false,
-              "type":"String",
-              "value":"",
-              "description": "The repository description"
-            },
-            "owner":{
-              "required":true,
-              "type":"String",
-              "value":"",
-              "description": "The repository owner"
-            },        
-          },
-          "outputs" : {},
-          "tool_name":"SCM"
-        },    
-    }]
-}
+    ],
+    "task": {
+      "command": "/gitblit/createRepository",
+      "inputs": {
+        "server_name": {
+          "required": true,
+          "type": "String",
+          "value": null,
+          "description": "The name of the Gitblit server."
+        },
+        "url": {
+          "required": true,
+          "type": "Url",
+          "value": null,
+          "description": "The Gitblit server URL"
+        },
+        "account": {
+          "required": true,
+          "type": "String",
+          "value": null,
+          "description": "The Gitblit account name"
+        },
+        "password": {
+          "required": true,
+          "type": "Password",
+          "value": null,
+          "description": "The Gitblit account password"
+        },
+        "repository_name": {
+          "required": true,
+          "type": "String",
+          "value": null,
+          "description": "The repository name"
+        },
+        "description": {
+          "required": false,
+          "type": "String",
+          "value": null,
+          "description": "The repository description"
+        },
+        "owner": {
+          "required": true,
+          "type": "String",
+          "value": null,
+          "description": "The repository owner"
+        }
+      },
+      "outputs": {},
+      "tool_name": "SCM"
+    },
+    "source_types": [
+      {
+        "name": "Gitblit",
+        "options": {
+          "server_name": "String",
+          "url": "String",
+          "account": "String",
+          "password": "Password"
+        }
+      }
+    ]
+  }
+]
