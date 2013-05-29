@@ -7,7 +7,7 @@
   </parent>
   <groupId>com.maestrodev.maestro.plugins</groupId>
   <artifactId>maestro-gitblit-plugin</artifactId>
-  <version>1.0</version>
+  <version>1.1-SNAPSHOT</version>
   <name>maestro-gitblit-plugin</name>
   <description>Gitblit Maestro plugin.</description>
 
