@@ -10,7 +10,13 @@
   <version>1.0-SNAPSHOT</version>
   <name>maestro-gitblit-plugin</name>
   <description>Gitblit Maestro plugin.</description>
-  
+
+  <scm>
+    <connection>scm:git:https://github.com/maestrodev/maestro-gitblit-plugin.git</connection>
+    <developerConnection>scm:git:ssh://git@github.com/maestrodev/maestro-gitblit-plugin.git</developerConnection>
+    <url>https://github.com/maestrodev/maestro-gitblit-plugin</url>
+  </scm>
+
   <build>
     <plugins>
         <plugin>
