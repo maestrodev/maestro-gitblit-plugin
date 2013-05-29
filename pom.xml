@@ -3,7 +3,7 @@
   <parent>
     <groupId>com.maestrodev</groupId>
     <artifactId>java-plugins</artifactId>
-    <version>2-SNAPSHOT</version>
+    <version>2</version>
   </parent>
   <groupId>com.maestrodev.maestro.plugins</groupId>
   <artifactId>maestro-gitblit-plugin</artifactId>
@@ -27,7 +27,7 @@
     <dependency>
       <groupId>com.maestrodev</groupId>
       <artifactId>maestro-plugin</artifactId>        
-      <version>2.0-SNAPSHOT</version>
+      <version>2.0.1</version>
     </dependency>
     <dependency>
       <groupId>com.gitblit</groupId>
