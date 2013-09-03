@@ -1,5 +1,6 @@
-[
-  {
+{
+  "image": "gitblit.png",
+  "tasks": [{
     "name": "gitblit create repository",
     "description": "Create a repository on a Gitblit server",
     "license": "Apache 2.0",
@@ -70,5 +71,5 @@
         }
       }
     ]
-  }
-]
+  }]
+}
